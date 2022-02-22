@@ -5,7 +5,7 @@ const { PORT = 3000, BASE_PATH } = process.env;
 const app = express();
 
 const timeLog = (req, res, next) => {
-  // your code here
+
   const method = req.method
   const data = new Date()
   
@@ -15,7 +15,6 @@ const timeLog = (req, res, next) => {
   next();
 };
 
-// and here
 app.use(timeLog);
 
 app.use('/', routes);
